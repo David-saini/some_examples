@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+            list-style-type: none;
+            text-decoration: none !important;
+        }
+
+        .mw_10 {
+            width: 10px;
+        }
+
+        .dropdown_menu {
+            position: absolute;
+            left: -50%;
+            top: -190%;
+            opacity: 0;
+        }
+
+        .menu_bar ul li:hover .dropdown_menu {
+            opacity: 1;
+            position: absolute;
+            transition: all 300ms linear;
+            left: -50%;
+            top: 100%;
+            background: #000;
+            border-radius: 10px;
+        }
+
+        .dropdown_menu ul {
+            display: block;
+            margin: 10px;
+        }
+
+        .dropdown_menu ul li {
+            padding: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="bg-black">
+        <div class="menu_bar d-flex align-items-center justify-content-between container py-3">
+            <h1 class="logo text-white">LightCode.</h1>
+            <ul class="d-flex align-items-center justify-content-center gap-5">
+                <li class="position-relative">
+                    <a href="#" class="text-white">Home</a>
+                </li>
+
+                <li class="position-relative">
+                    <a href="#" class="text-white">Pages <img class="mw_10" src="./assets/images/png/Polygon 1.png"
+                            alt=""></a>
+
+                    <span class="dropdown_menu">
+                        <ul class="ps-0">
+                            <li><a href="#" class="text-white">portfolio</a></li>
+                            <li><a href="#" class="text-white">pricing</a></li>
+                            <li><a href="#" class="text-white">team</a></li>
+                            <li><a href="#" class="text-white">Faq</a></li>
+                        </ul>
+                    </span>
+
+                </li>
+
+                <li class="position-relative">
+                    <a href="#" class="text-white">service <img class="mw_10" src="./assets/images/png/Polygon 1.png"
+                            alt=""></a>
+
+                    <span class="dropdown_menu">
+                        <ul class="ps-0">
+                            <li><a href="#" class="text-white">portfolio</a></li>
+                            <li><a href="#" class="text-white">pricing</a></li>
+                            <li><a href="#" class="text-white">team</a></li>
+                            <li><a href="#" class="text-white">Faq</a></li>
+                        </ul>
+                    </span>
+
+                </li>
+
+                <li><a href="#" class="text-white">contact us</a></li>
+
+                <li class="position-relative">
+                    <a href="#" class="text-white">about <img class="mw_10" src="./assets/images/png/Polygon 1.png"
+                            alt=""></a>
+
+                    <span class="dropdown_menu">
+                        <ul class="ps-0">
+                            <li><a href="#" class="text-white">portfolio</a></li>
+                            <li><a href="#" class="text-white">pricing</a></li>
+                            <li><a href="#" class="text-white">team</a></li>
+                            <li><a href="#" class="text-white">Faq</a></li>
+                        </ul>
+                    </span>
+
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

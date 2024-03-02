@@ -1,0 +1,165 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navtab</title>
+
+    <style>
+        .gap_3 {
+            gap: 16px;
+        }
+
+        body {
+            background-color: #deeeff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .custom_container {
+            max-width: 600px;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 30px;
+        }
+
+        .tab_box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 2px solid #deeeff;
+            padding-bottom: 10px;
+        }
+
+        .tab_box .tab_btn {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            border: 1px solid yellowgreen;
+            background-color: yellowgreen;
+            padding: 10px 20px;
+            border-radius: 25px;
+            transition: all 300ms linear;
+            cursor: pointer;
+        }
+
+        .tab_box .tab_btn .active {
+            background-color: transparent;
+            color: yellowgreen;
+        }
+
+        .content_box {
+            padding: 20px;
+        }
+
+        .content {
+            display: none;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="custom_container">
+        <div class="tab_box gap_3">
+            <button class="tab_btn">Home</button>
+            <button class="tab_btn">About</button>
+            <button class="tab_btn">Blogs</button>
+            <button class="tab_btn">Contact us</button>
+        </div>
+
+        <div class="content_box">
+
+            <div class="content">
+                <h2>Home</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, numquam non quo dicta ipsam incidunt
+                    nam consectetur vero dolores at, quibusdam voluptate dolorem quam doloremque iure nisi distinctio
+                    facilis. Id.</p>
+            </div>
+
+            <div class="content">
+                <h2>About</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, numquam non quo dicta ipsam incidunt
+                    nam consectetur vero dolores at, quibusdam voluptate dolorem quam doloremque iure nisi distinctio
+                    facilis. Id.</p>
+            </div>
+
+            <div class="content">
+                <h2>Blogs</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, numquam non quo dicta ipsam incidunt
+                    nam consectetur vero dolores at, quibusdam voluptate dolorem quam doloremque iure nisi distinctio
+                    facilis. Id.</p>
+            </div>
+
+            <div class="content">
+                <h2>Contact us</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum, numquam non quo dicta ipsam incidunt
+                    nam consectetur vero dolores at, quibusdam voluptate dolorem quam doloremque iure nisi distinctio
+                    facilis. Id.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab_btn');
+        const all_content = document.querySelectorAll('.content');
+
+        tabs.forEach((tab, index) => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(tab => { tab.classList.remove('.active') });
+                tab.classList.add('active');
+            })
+        }
+        )
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            text-decoration: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- tab_section -->
+    <div class="nav_tabs">
+        <a href="#">HOME</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">portfolio</a>
+    </div>
+
+    <!-- content_section -->
+    <div class="content">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit repellat ipsum quas. Quam tempora maxime
+            facere molestias enim repellat illo fuga magnam. Voluptatum deserunt perspiciatis sint neque provident
+            magnam laborum?</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player with</title>
+    <style>
+        .video_content {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
+        .max_w_56px {
+            max-width: 56px;
+        }
+
+        .videoplayerBtn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            /* Add cursor pointer to indicate it's clickable */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="video1" class="video_content active position-relative">
+        <video id="videoPlayer1" poster="./assets/images/png/hand_img.png">
+            <source src="./assets/video/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="position-absolute videoplayerBtn" onclick="togglePlayPause('videoPlayer1')">
+            <img class="max_w_56px" src="./assets/images/png/videoplayer.webp" alt="videoplayer">
+        </div>
+    </div>
+
+    <div id="video2" class="video_content active position-relative">
+        <video id="videoPlayer2" poster="./assets/images/png/hand_img.png">
+            <source src="./assets/video/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="position-absolute videoplayerBtn" onclick="togglePlayPause('videoPlayer2')">
+            <img class="max_w_56px" src="./assets/images/png/videoplayer.webp" alt="videoplayer">
+        </div>
+    </div>
+
+    <div id="video3" class="video_content active position-relative">
+        <video id="videoPlayer3" poster="./assets/images/png/hand_img.png">
+            <source src="./assets/video/video1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="position-absolute videoplayerBtn" onclick="togglePlayPause('videoPlayer3')">
+            <img class="max_w_56px" src="./assets/images/png/videoplayer.webp" alt="videoplayer">
+        </div>
+    </div>
+
+
+
+    <div id="tabs">
+        <button class="video_btn" onclick="openTab('video1')">Video 1</button>
+        <button class="video_btn" onclick="openTab('video2')">Video 2</button>
+        <button class="video_btn" onclick="openTab('video3')">Video 3</button>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("video_content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+            var videos = document.querySelectorAll("video");
+            for (i = 0; i < videos.length; i++) {
+                if (videos[i].id !== "videoPlayer" + tabName.charAt(tabName.length - 1)) {
+                    videos[i].pause();
+                }
+            }
+        }
+
+        function togglePlayPause(videoId) {
+            var video = document.getElementById(videoId);
+            var button = video.nextElementSibling;
+            if (video.paused || video.ended) {
+                video.play();
+            } else {
+                video.pause();
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            openTab("video1");
+        });
+    </script>
+</body>
+
+</html>
